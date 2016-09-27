@@ -41,8 +41,8 @@ sudo apt-get install npm -y
 sudo npm install -g bower 
 
 sudo mv propel-dist.yaml propel.yaml
-sudo sed -i "s@user: root@user: $dbuser@"
-sudo sed -i "s@password: root@password: $dbpass@"
+sudo sed -i "s@user: root@user: $dbuser@" propel.yaml
+sudo sed -i "s@password: root@password: $dbpass@" propel.yaml
 
 export PATH="$PATH:."
 sudo make
