@@ -32,9 +32,9 @@ git config --global user.email "www-data@$domain"
 cd $src_path
 sudo wget https://getcomposer.org/installer 
 sudo php installer
-sudo mv composer.phar composer
-sudo rm installer
-sudo chmod +x composer
+sudo mv composer.phar /usr/local/bin/composer
+sudo chmod +x /usr/local/bin/composer
+sudo rm -f installer
 
 sudo apt-get update -y
 sudo apt-get install npm -y

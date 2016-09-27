@@ -51,9 +51,9 @@ git config --global user.email "www-data@$domain"
 cd $src_path
 sudo wget https://getcomposer.org/installer 
 sudo php installer
-sudo mv composer.phar composer
-sudo rm installer
-sudo chmod +x composer
+sudo mv composer.phar /usr/local/bin/composer
+sudo chmod +x /usr/local/bin/composer
+sudo rm -f installer
 
 sudo apt-get update -y
 sudo apt-get install npm -y
@@ -63,7 +63,6 @@ sudo mv propel-dist.yaml propel.yaml
 sudo sed -i "s@user: root@user: $dbuser@" propel.yaml
 sudo sed -i "s@password: root@password: $dbpass@" propel.yaml
 
-export PATH="$PATH:."
 sudo make
 
 sudo chown -R root: $src_path
