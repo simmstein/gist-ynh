@@ -22,21 +22,29 @@ sudo yunohost app checkurl "${domain}${path}" -a "$app" \
 
 # Restore sources & data
 src_path=/var/www/$app
-git clone https://gitnet.fr/deblan/gist $src_path
+
+sudo mkdir -p /var/www/
+sudo git clone https://gitnet.fr/deblan/gist $src_path
+
+git config --global user.email "www-data@$domain"
+git config --global user.email "www-data@$domain"
+
 cd $src_path
-git config --global user.email "www-data@$domain"
-git config --global user.email "www-data@$domain"
-curl -sS https://getcomposer.org/installer | php
-mv composer.phar composer
-chmod +x composer
-export PATH="$PATH:."
+sudo curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar composer
+sudo chmod +x composer
+
 sudo apt-get update -y
 sudo apt-get install npm -y
 sudo npm install -g bower 
-mv propel-dist.yaml propel.yaml
-sed -i "s@user: root@user: $dbuser@"
-sed -i "s@password: root@password: $dbpass@"
-make
+
+sudo mv propel-dist.yaml propel.yaml
+sudo sed -i "s@user: root@user: $dbuser@"
+sudo sed -i "s@password: root@password: $dbpass@"
+
+export PATH="$PATH:."
+sudo make
+
 sudo chown -R root: $src_path
 sudo chown -R www-data: $src_path/data/git/
 

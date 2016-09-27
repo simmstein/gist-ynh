@@ -21,10 +21,17 @@ path=${path%/}
 
 # Copy source files
 src_path=/var/www/$app
-make update
+
+export PATH="$PATH:."
+
+cd $src_path
+
+sudo make update
 
 sudo chown -R root: $src_path
 sudo chown -R www-data: $src_path/data/git/
+
+cd -
 
 # Reload nginx service
 sudo service nginx reload
