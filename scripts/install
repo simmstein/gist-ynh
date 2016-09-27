@@ -49,8 +49,10 @@ git config --global user.email "www-data@$domain"
 git config --global user.email "www-data@$domain"
 
 cd $src_path
-sudo curl -sS https://getcomposer.org/installer | sudo php
+sudo wget https://getcomposer.org/installer 
+sudo php installer
 sudo mv composer.phar composer
+sudo rm installer
 sudo chmod +x composer
 
 sudo apt-get update -y
