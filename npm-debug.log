@@ -1,0 +1,179 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/src/node-v4.4.0-linux-x64/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'bower' ]
+2 info using npm@2.14.20
+3 info using node@v4.4.0
+4 verbose install initial load of /usr/local/src/node-v4.4.0-linux-x64/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/src/node-v4.4.0-linux-x64/lib/package.json
+6 silly cache add args [ 'bower', null ]
+7 verbose cache add spec bower
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'bower',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'bower',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed bower@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for bower
+11 info addNameTag [ 'bower', 'latest' ]
+12 silly mapToRegistry name bower
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/bower
+16 verbose addNameTag registry:https://registry.npmjs.org/bower not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/bower
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 22:15:44
+20 verbose request id f41ca9cb4cab3c40
+21 verbose etag "YDJFDTGIZ9YU9CLMMBSJICWX"
+22 http request GET https://registry.npmjs.org/bower
+23 http 200 https://registry.npmjs.org/bower
+24 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 verbose headers   etag: '"7YLN0K0O0W43GB3C9X14BOLE4"',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'content-encoding': 'gzip',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'content-length': '20735',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Tue, 27 Sep 2016 20:15:44 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   age: '96',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-lhr6325-LHR',
+24 verbose headers   'x-cache': 'HIT',
+24 verbose headers   'x-cache-hits': '1',
+24 verbose headers   'x-timer': 'S1475007344.994727,VS0,VE0',
+24 verbose headers   vary: 'Accept-Encoding' }
+25 silly get cb [ 200,
+25 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 silly get     etag: '"7YLN0K0O0W43GB3C9X14BOLE4"',
+25 silly get     'content-type': 'application/json',
+25 silly get     'content-encoding': 'gzip',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'content-length': '20735',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Tue, 27 Sep 2016 20:15:44 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     age: '96',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-lhr6325-LHR',
+25 silly get     'x-cache': 'HIT',
+25 silly get     'x-cache-hits': '1',
+25 silly get     'x-timer': 'S1475007344.994727,VS0,VE0',
+25 silly get     vary: 'Accept-Encoding' } ]
+26 verbose get saving bower to /home/simon/.npm/registry.npmjs.org/bower/.cache.json
+27 verbose correctMkdir /home/simon/.npm correctMkdir not in flight; initializing
+28 silly addNameTag next cb for bower with tag latest
+29 silly addNamed bower@1.7.9
+30 verbose addNamed "1.7.9" is a plain semver version for bower
+31 silly mapToRegistry name bower
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry uri https://registry.npmjs.org/bower
+35 verbose addRemoteTarball https://registry.npmjs.org/bower/-/bower-1.7.9.tgz not in flight; adding
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/bower/-/bower-1.7.9.tgz',
+36 verbose addRemoteTarball   'b7296c2393e0d75edaa6ca39648132dd255812b0' ]
+37 info retry fetch attempt 1 at 22:15:45
+38 info attempt registry request try #1 at 22:15:45
+39 http fetch GET https://registry.npmjs.org/bower/-/bower-1.7.9.tgz
+40 http fetch 200 https://registry.npmjs.org/bower/-/bower-1.7.9.tgz
+41 silly fetchAndShaCheck shasum b7296c2393e0d75edaa6ca39648132dd255812b0
+42 verbose addTmpTarball /tmp/npm-17650-2a862394/registry.npmjs.org/bower/-/bower-1.7.9.tgz not in flight; adding
+43 verbose addTmpTarball already have metadata; skipping unpack for bower@1.7.9
+44 verbose correctMkdir /home/simon/.npm correctMkdir not in flight; initializing
+45 silly cache afterAdd bower@1.7.9
+46 verbose afterAdd /home/simon/.npm/bower/1.7.9/package/package.json not in flight; writing
+47 verbose correctMkdir /home/simon/.npm correctMkdir not in flight; initializing
+48 verbose afterAdd /home/simon/.npm/bower/1.7.9/package/package.json written
+49 silly install resolved [ { name: 'bower',
+49 silly install resolved     version: '1.7.9',
+49 silly install resolved     description: 'The browser package manager',
+49 silly install resolved     author: { name: 'Twitter' },
+49 silly install resolved     license: 'MIT',
+49 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/bower/bower.git' },
+49 silly install resolved     main: 'lib',
+49 silly install resolved     bin: { bower: 'bin/bower' },
+49 silly install resolved     homepage: 'http://bower.io',
+49 silly install resolved     engines: { node: '>=0.10.0' },
+49 silly install resolved     keywords: [ 'bower' ],
+49 silly install resolved     files: [ 'bin', 'lib' ],
+49 silly install resolved     bugs: { url: 'https://github.com/bower/bower/issues' },
+49 silly install resolved     _id: 'bower@1.7.9',
+49 silly install resolved     scripts: {},
+49 silly install resolved     _shasum: 'b7296c2393e0d75edaa6ca39648132dd255812b0',
+49 silly install resolved     _from: 'bower@latest',
+49 silly install resolved     _npmVersion: '3.7.3',
+49 silly install resolved     _nodeVersion: '5.9.0',
+49 silly install resolved     _npmUser: { name: 'sheerun', email: 'sheerun@sher.pl' },
+49 silly install resolved     dist:
+49 silly install resolved      { shasum: 'b7296c2393e0d75edaa6ca39648132dd255812b0',
+49 silly install resolved        tarball: 'https://registry.npmjs.org/bower/-/bower-1.7.9.tgz' },
+49 silly install resolved     maintainers:
+49 silly install resolved      [ [Object],
+49 silly install resolved        [Object],
+49 silly install resolved        [Object],
+49 silly install resolved        [Object],
+49 silly install resolved        [Object],
+49 silly install resolved        [Object],
+49 silly install resolved        [Object] ],
+49 silly install resolved     _npmOperationalInternal:
+49 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+49 silly install resolved        tmp: 'tmp/bower-1.7.9.tgz_1459857239351_0.9720134933013469' },
+49 silly install resolved     directories: {},
+49 silly install resolved     _resolved: 'https://registry.npmjs.org/bower/-/bower-1.7.9.tgz' } ]
+50 info install bower@1.7.9 into /usr/local/src/node-v4.4.0-linux-x64/lib
+51 info installOne bower@1.7.9
+52 verbose installOne of bower to /usr/local/src/node-v4.4.0-linux-x64/lib not in flight; installing
+53 verbose correctMkdir /home/simon/.npm/_locks correctMkdir not in flight; initializing
+54 verbose lock using /home/simon/.npm/_locks/bower-bc20f5c394de4926.lock for /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower
+55 silly install write writing bower 1.7.9 to /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower
+56 verbose unbuild lib/node_modules/bower
+57 silly gentlyRm /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower is being purged from base /usr/local/src/node-v4.4.0-linux-x64
+58 verbose gentlyRm don't care about contents; nuking /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower
+59 verbose tar unpack /home/simon/.npm/bower/1.7.9/package.tgz
+60 verbose tar unpacking to /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower
+61 silly gentlyRm /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower is being purged
+62 verbose gentlyRm don't care about contents; nuking /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower
+63 silly gunzTarPerm modes [ '755', '644' ]
+64 error tar.unpack untar error /home/simon/.npm/bower/1.7.9/package.tgz
+65 verbose unlock done using /home/simon/.npm/_locks/bower-bc20f5c394de4926.lock for /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower
+66 verbose fstream_path /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower
+67 verbose fstream_type Directory
+68 verbose fstream_class DirWriter
+69 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower'
+69 verbose stack     at Error (native)
+70 verbose fstream_stack /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+70 verbose fstream_stack /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+70 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+71 verbose cwd /home/simon/public_html/www/repo/gist-ynh
+72 error Linux 3.16.0-4-amd64
+73 error argv "/usr/local/src/node-v4.4.0-linux-x64/bin/node" "/usr/local/bin/npm" "install" "-g" "bower"
+74 error node v4.4.0
+75 error npm  v2.14.20
+76 error path /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower
+77 error code EACCES
+78 error errno -13
+79 error syscall mkdir
+80 error Error: EACCES: permission denied, mkdir '/usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower'
+80 error     at Error (native)
+80 error  { [Error: EACCES: permission denied, mkdir '/usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower']
+80 error   errno: -13,
+80 error   code: 'EACCES',
+80 error   syscall: 'mkdir',
+80 error   path: '/usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower',
+80 error   fstream_type: 'Directory',
+80 error   fstream_path: '/usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower',
+80 error   fstream_class: 'DirWriter',
+80 error   fstream_stack:
+80 error    [ '/usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+80 error      '/usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+80 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+81 error Please try running this command again as root/Administrator.
+82 verbose exit [ -13, true ]
+83 verbose unbuild lib/node_modules/bower
+84 silly gentlyRm /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower is being purged from base /usr/local/src/node-v4.4.0-linux-x64
+85 verbose gentlyRm don't care about contents; nuking /usr/local/src/node-v4.4.0-linux-x64/lib/node_modules/bower

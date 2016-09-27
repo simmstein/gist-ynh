@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Note: each files and directories you've saved using the ynh_backup helper
+# will be located in the current directory, regarding the last argument.
+
+# Exit on command errors and treat unset variables as an error
+set -eu
+
+# See comments in install script
+app=$YNH_APP_INSTANCE_NAME
+
+# Source YunoHost helpers
+source /usr/share/yunohost/helpers
+
+# Retrieve old app settings
+domain=$(ynh_app_setting_get "$app" domain)
+path=$(ynh_app_setting_get "$app" path)
+
+# Check domain/path availability
+sudo yunohost app checkurl "${domain}${path}" -a "$app" \
+    || ynh_die "Path not available: ${domain}${path}"
+
+# Restore sources & data
+src_path=/var/www/$app
+git clone https://gitnet.fr/deblan/gist $src_path
+cd $src_path
+git config --global user.email "www-data@$domain"
+git config --global user.email "www-data@$domain"
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar composer
+chmod +x composer
+export PATH="$PATH:."
+sudo apt-get update -y
+sudo apt-get install npm -y
+sudo npm install -g bower 
+mv propel-dist.yaml propel.yaml
+sed -i "s@user: root@user: $dbuser@"
+sed -i "s@password: root@password: $dbpass@"
+make
+sudo chown -R root: $src_path
+sudo chown -R www-data: $src_path/data/git/
+
+# Restore NGINX configuration
+sudo cp -a ./nginx.conf "/etc/nginx/conf.d/${domain}.d/${app}.conf"
+
+# Restart webserver
+sudo service nginx reload
